@@ -1,5 +1,9 @@
 # Breaking Standup
 
+<p align="center">
+  <img src="assets/breaking-standup-icon.png" alt="Breaking Standup" width="128">
+</p>
+
 A macOS menu bar app that plays a jingle before your meetings start. Never be late to standup again.
 
 ## Features
@@ -12,6 +16,12 @@ A macOS menu bar app that plays a jingle before your meetings start. Never be la
 - Choose which calendars to monitor
 - Launch at login support
 - Lightweight and private — your calendar data never leaves your Mac
+
+## Screenshots
+
+| Menu Bar | Settings (General) | Settings (Audio) |
+|:---:|:---:|:---:|
+| ![Menu Bar](assets/app-store.png) | ![Settings General](assets/settings-general.png) | ![Settings Audio](assets/settings-audio.png) |
 
 ## Requirements
 
