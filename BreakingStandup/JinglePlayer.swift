@@ -7,6 +7,7 @@ final class JinglePlayer: ObservableObject {
     @Published var isPlaying = false
 
     private var player: AVAudioPlayer?
+    private var playbackDelegate: PlaybackDelegate?
     private var activeSecurityScope: URL?
 
     /// URL of the user-selected custom jingle, persisted in UserDefaults.
@@ -27,7 +28,8 @@ final class JinglePlayer: ObservableObject {
 
         do {
             player = try AVAudioPlayer(contentsOf: url)
-            player?.delegate = PlaybackDelegate(owner: self)
+            playbackDelegate = PlaybackDelegate(owner: self)
+            player?.delegate = playbackDelegate
             player?.play()
             isPlaying = true
         } catch {
@@ -39,6 +41,7 @@ final class JinglePlayer: ObservableObject {
     func stop() {
         player?.stop()
         player = nil
+        playbackDelegate = nil
         isPlaying = false
         stopSecurityScope()
     }

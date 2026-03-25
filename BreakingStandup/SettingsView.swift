@@ -1,5 +1,6 @@
-import SwiftUI
 import EventKit
+import ServiceManagement
+import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var monitor: MeetingMonitor
@@ -157,24 +158,24 @@ private struct CalendarToggleRow: View {
 // MARK: - Launch at Login
 
 private struct LaunchAtLoginToggle: View {
-    @AppStorage("launchAtLogin") private var launchAtLogin = false
+    @State private var launchAtLogin = SMAppService.mainApp.status == .enabled
 
     var body: some View {
         Toggle("Launch at login", isOn: $launchAtLogin)
             .onChange(of: launchAtLogin) { _, newValue in
-                LaunchAtLoginHelper.set(enabled: newValue)
+                do {
+                    if newValue {
+                        try SMAppService.mainApp.register()
+                    } else {
+                        try SMAppService.mainApp.unregister()
+                    }
+                } catch {
+                    print(
+                        "Launch at login error: "
+                        + error.localizedDescription
+                    )
+                    launchAtLogin = SMAppService.mainApp.status == .enabled
+                }
             }
     }
 }
-
-enum LaunchAtLoginHelper {
-    static func set(enabled: Bool) {
-        if enabled {
-            try? SMAppService.mainApp.register()
-        } else {
-            try? SMAppService.mainApp.unregister()
-        }
-    }
-}
-
-import ServiceManagement

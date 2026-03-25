@@ -16,7 +16,7 @@ final class MeetingMonitor: ObservableObject {
 
     // MARK: - Settings (persisted via UserDefaults)
 
-    @AppStorage("secondsBefore") var secondsBefore: Int = 15
+    @AppStorage("secondsBefore") var secondsBefore: Int = 10
     @AppStorage("disabledCalendarIDs") var disabledCalendarIDsRaw = ""
 
     // MARK: - Private
@@ -24,7 +24,8 @@ final class MeetingMonitor: ObservableObject {
     private let store = EKEventStore()
     let jinglePlayer = JinglePlayer()
     private var timer: Timer?
-    private var playedEventIDs: Set<String> = []
+    private var playedEventKeys: Set<String> = []
+    private var scheduledJingleTimer: Timer?
 
     var disabledCalendarIDs: Set<String> {
         get {
@@ -58,9 +59,10 @@ final class MeetingMonitor: ObservableObject {
     func start() {
         isRunning = true
         refreshNextEvent()
+        requestNotificationPermission()
 
         timer = Timer.scheduledTimer(
-            withTimeInterval: 5, repeats: true
+            withTimeInterval: 20, repeats: true
         ) { [weak self] _ in
             self?.tick()
         }
@@ -71,6 +73,19 @@ final class MeetingMonitor: ObservableObject {
             name: .EKEventStoreChanged,
             object: store
         )
+    }
+
+    private func requestNotificationPermission() {
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: [.alert, .sound]
+        ) { granted, error in
+            if let error = error {
+                print(
+                    "Notification permission error: "
+                    + error.localizedDescription
+                )
+            }
+        }
     }
 
     func stop() {
@@ -91,28 +106,42 @@ final class MeetingMonitor: ObservableObject {
 
         // Already played or event has passed
         guard secsUntilStart > -5,
-              !playedEventIDs.contains(eventID(event)) else {
+              !playedEventKeys.contains(eventKey(event)) else {
             return
         }
 
-        // Fire when within the trigger window
-        if secsUntilStart <= Double(secondsBefore) {
-            playedEventIDs.insert(eventID(event))
-            fireJingle(for: event)
+        // Schedule jingle to fire at exactly `secondsBefore`
+        let triggerAt = Double(secondsBefore)
+        let delay = secsUntilStart - triggerAt
+        if delay <= 20, scheduledJingleTimer == nil {
+            playedEventKeys.insert(eventKey(event))
+            if delay <= 0 {
+                fireJingle(for: event)
+            } else {
+                scheduledJingleTimer = Timer.scheduledTimer(
+                    withTimeInterval: delay, repeats: false
+                ) { [weak self] _ in
+                    self?.scheduledJingleTimer = nil
+                    self?.fireJingle(for: event)
+                }
+            }
         }
     }
 
     @objc private func calendarChanged() {
         DispatchQueue.main.async { [weak self] in
+            self?.scheduledJingleTimer?.invalidate()
+            self?.scheduledJingleTimer = nil
             self?.refreshNextEvent()
         }
     }
 
     func refreshNextEvent() {
+        store.reset()
         let now = Date()
-        let end = Calendar.current.date(
+        guard let end = Calendar.current.date(
             byAdding: .hour, value: 8, to: now
-        )!
+        ) else { return }
         let predicate = store.predicateForEvents(
             withStart: now, end: end, calendars: nil
         )
@@ -127,10 +156,9 @@ final class MeetingMonitor: ObservableObject {
             $0.startDate <= now && $0.endDate > now
         }
 
-        // Next event: starts in the future, not yet played
+        // Next event: starts in the future
         let next = allEvents.first {
             $0.startDate > now
-            && !playedEventIDs.contains(eventID($0))
         }
 
         DispatchQueue.main.async {
@@ -158,7 +186,7 @@ final class MeetingMonitor: ObservableObject {
         content.sound = .none
 
         let request = UNNotificationRequest(
-            identifier: eventID(event),
+            identifier: eventKey(event),
             content: content,
             trigger: nil
         )
@@ -167,8 +195,11 @@ final class MeetingMonitor: ObservableObject {
 
     // MARK: - Helpers
 
-    private func eventID(_ event: EKEvent) -> String {
-        event.calendarItemExternalIdentifier ?? event.eventIdentifier
+    private func eventKey(_ event: EKEvent) -> String {
+        let id = event.calendarItemExternalIdentifier
+            ?? event.eventIdentifier
+        let ts = Int(event.startDate.timeIntervalSince1970)
+        return "\(id)_\(ts)"
     }
 
     var allCalendars: [EKCalendar] {
@@ -176,7 +207,7 @@ final class MeetingMonitor: ObservableObject {
     }
 
     func resetPlayedEvents() {
-        playedEventIDs.removeAll()
+        playedEventKeys.removeAll()
         refreshNextEvent()
     }
 }

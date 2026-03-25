@@ -140,6 +140,7 @@ final class MenuBarManager {
             playingEventName = nil
             button.wantsLayer = true
             button.layer?.backgroundColor = nil
+            monitor.refreshNextEvent()
             updateStatusBar(
                 next: monitor.nextEvent,
                 current: monitor.currentEvent,
@@ -241,6 +242,7 @@ final class MenuBarManager {
         if popover.isShown {
             popover.performClose(nil)
         } else {
+            monitor?.refreshNextEvent()
             popover.show(
                 relativeTo: button.bounds,
                 of: button,

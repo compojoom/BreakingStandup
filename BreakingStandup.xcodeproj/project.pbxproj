@@ -22,7 +22,7 @@
 		372FEFB1712FBC323368E1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		383149065EC521BA32399EBA /* JinglePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JinglePlayer.swift; sourceTree = "<group>"; };
 		4023557101339FF205E4B7E1 /* MeetingMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingMonitor.swift; sourceTree = "<group>"; };
-		5EE1094EC9BDE7D03A905420 /* BreakingStandup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingStandup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE1094EC9BDE7D03A905420 /* Breaking Standup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breaking Standup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		794D881D2D2C151C3544B3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E1ACA57F05B6AB42E7ACFC0 /* MenuBarPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarPopoverView.swift; sourceTree = "<group>"; };
 		AA8B3B040B14497ADE2A7EDB /* BreakingStandup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BreakingStandup.entitlements; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		6D8CB2ED5B221D700F84E84D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5EE1094EC9BDE7D03A905420 /* BreakingStandup.app */,
+				5EE1094EC9BDE7D03A905420 /* Breaking Standup.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,7 +91,7 @@
 			packageProductDependencies = (
 			);
 			productName = BreakingStandup;
-			productReference = 5EE1094EC9BDE7D03A905420 /* BreakingStandup.app */;
+			productReference = 5EE1094EC9BDE7D03A905420 /* Breaking Standup.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,8 +102,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 5BAC604E3A9BB89D8D6DC8DD /* Build configuration list for PBXProject "BreakingStandup" */;
 			developmentRegion = en;
@@ -216,15 +214,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BreakingStandup/BreakingStandup.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 67K2QLHC6A;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = BreakingStandup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.compojoom.meetingmusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.compojoom.breakingstandup;
 				PRODUCT_NAME = "Breaking Standup";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -299,15 +301,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BreakingStandup/BreakingStandup.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 67K2QLHC6A;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = BreakingStandup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.compojoom.meetingmusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.compojoom.breakingstandup;
 				PRODUCT_NAME = "Breaking Standup";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
