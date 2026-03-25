@@ -1,0 +1,31 @@
+name: BreakingStandup
+options:
+  bundleIdPrefix: com.compojoom
+  deploymentTarget:
+    macOS: "15.0"
+  xcodeVersion: "16.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: 1
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "15.0"
+
+targets:
+  BreakingStandup:
+    type: application
+    platform: macOS
+    sources:
+      - BreakingStandup
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.compojoom.meetingmusic
+        INFOPLIST_FILE: BreakingStandup/Info.plist
+        CODE_SIGN_ENTITLEMENTS: BreakingStandup/BreakingStandup.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ENABLE_HARDENED_RUNTIME: true
+        PRODUCT_NAME: "Breaking Standup"
+    entitlements:
+      path: BreakingStandup/BreakingStandup.entitlements

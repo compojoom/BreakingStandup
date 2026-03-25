@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		254CBDE8D06783AD43D46273 /* MeetingMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023557101339FF205E4B7E1 /* MeetingMonitor.swift */; };
+		6A7E54D57FAE8BC90D6D988B /* MenuBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F9584AEAE509242C8F53B /* MenuBarManager.swift */; };
+		8C6C53586437923FF0AA55DE /* BreakingStandupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326AEE3E73067C64592C002C /* BreakingStandupApp.swift */; };
+		8DC6B0E84182601DD5830AA2 /* default_jingle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE15FFC37C0424EEA22E5B09 /* default_jingle.mp3 */; };
+		99E09D66FEC6D37CC3359A4D /* MenuBarPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1ACA57F05B6AB42E7ACFC0 /* MenuBarPopoverView.swift */; };
+		A0EC9EE355F08A340FF7B345 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 794D881D2D2C151C3544B3CC /* Assets.xcassets */; };
+		C66E4FB7C0C369C43BF529E7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436FA5C1A276B244D4A22AD /* SettingsView.swift */; };
+		D1167A0EDDC7EF88C0F1C265 /* JinglePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383149065EC521BA32399EBA /* JinglePlayer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		326AEE3E73067C64592C002C /* BreakingStandupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingStandupApp.swift; sourceTree = "<group>"; };
+		372FEFB1712FBC323368E1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		383149065EC521BA32399EBA /* JinglePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JinglePlayer.swift; sourceTree = "<group>"; };
+		4023557101339FF205E4B7E1 /* MeetingMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingMonitor.swift; sourceTree = "<group>"; };
+		5EE1094EC9BDE7D03A905420 /* BreakingStandup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingStandup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		794D881D2D2C151C3544B3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E1ACA57F05B6AB42E7ACFC0 /* MenuBarPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarPopoverView.swift; sourceTree = "<group>"; };
+		AA8B3B040B14497ADE2A7EDB /* BreakingStandup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BreakingStandup.entitlements; sourceTree = "<group>"; };
+		C436FA5C1A276B244D4A22AD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C76F9584AEAE509242C8F53B /* MenuBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarManager.swift; sourceTree = "<group>"; };
+		DE15FFC37C0424EEA22E5B09 /* default_jingle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = default_jingle.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		32D04071DB862416C28440D3 = {
+			isa = PBXGroup;
+			children = (
+				5B6FD382469A64816A720FC7 /* BreakingStandup */,
+				6D8CB2ED5B221D700F84E84D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39C9CD4292B031429D72C6D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DE15FFC37C0424EEA22E5B09 /* default_jingle.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B6FD382469A64816A720FC7 /* BreakingStandup */ = {
+			isa = PBXGroup;
+			children = (
+				794D881D2D2C151C3544B3CC /* Assets.xcassets */,
+				AA8B3B040B14497ADE2A7EDB /* BreakingStandup.entitlements */,
+				326AEE3E73067C64592C002C /* BreakingStandupApp.swift */,
+				372FEFB1712FBC323368E1DF /* Info.plist */,
+				383149065EC521BA32399EBA /* JinglePlayer.swift */,
+				4023557101339FF205E4B7E1 /* MeetingMonitor.swift */,
+				C76F9584AEAE509242C8F53B /* MenuBarManager.swift */,
+				8E1ACA57F05B6AB42E7ACFC0 /* MenuBarPopoverView.swift */,
+				C436FA5C1A276B244D4A22AD /* SettingsView.swift */,
+				39C9CD4292B031429D72C6D2 /* Resources */,
+			);
+			path = BreakingStandup;
+			sourceTree = "<group>";
+		};
+		6D8CB2ED5B221D700F84E84D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EE1094EC9BDE7D03A905420 /* BreakingStandup.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0829608A6A77B516387555CC /* BreakingStandup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D8591D760FA7F4A6BEAC1DD /* Build configuration list for PBXNativeTarget "BreakingStandup" */;
+			buildPhases = (
+				A267C28A477E6995E8D98340 /* Sources */,
+				B14D3350DC1783E758083353 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BreakingStandup;
+			packageProductDependencies = (
+			);
+			productName = BreakingStandup;
+			productReference = 5EE1094EC9BDE7D03A905420 /* BreakingStandup.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		222DB080672FDB5CF692AC5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 5BAC604E3A9BB89D8D6DC8DD /* Build configuration list for PBXProject "BreakingStandup" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 32D04071DB862416C28440D3;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6D8CB2ED5B221D700F84E84D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0829608A6A77B516387555CC /* BreakingStandup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B14D3350DC1783E758083353 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0EC9EE355F08A340FF7B345 /* Assets.xcassets in Resources */,
+				8DC6B0E84182601DD5830AA2 /* default_jingle.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A267C28A477E6995E8D98340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C6C53586437923FF0AA55DE /* BreakingStandupApp.swift in Sources */,
+				D1167A0EDDC7EF88C0F1C265 /* JinglePlayer.swift in Sources */,
+				254CBDE8D06783AD43D46273 /* MeetingMonitor.swift in Sources */,
+				6A7E54D57FAE8BC90D6D988B /* MenuBarManager.swift in Sources */,
+				99E09D66FEC6D37CC3359A4D /* MenuBarPopoverView.swift in Sources */,
+				C66E4FB7C0C369C43BF529E7 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D9DE606F79BA16A4746B0580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		E9048A3655178EF34E10EA1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BreakingStandup/BreakingStandup.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = BreakingStandup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.compojoom.meetingmusic;
+				PRODUCT_NAME = "Breaking Standup";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EBE6CFEBA58C57ECF0AF306D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		F1FD1048448E3F9832D11466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BreakingStandup/BreakingStandup.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = BreakingStandup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.compojoom.meetingmusic;
+				PRODUCT_NAME = "Breaking Standup";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D8591D760FA7F4A6BEAC1DD /* Build configuration list for PBXNativeTarget "BreakingStandup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9048A3655178EF34E10EA1D /* Debug */,
+				F1FD1048448E3F9832D11466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5BAC604E3A9BB89D8D6DC8DD /* Build configuration list for PBXProject "BreakingStandup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE6CFEBA58C57ECF0AF306D /* Debug */,
+				D9DE606F79BA16A4746B0580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 222DB080672FDB5CF692AC5D /* Project object */;
+}
