@@ -6,6 +6,8 @@
 
 A macOS menu bar app that plays a jingle before your meetings start. Never be late to standup again.
 
+[Available in the App Store now](https://apps.apple.com/de/app/breaking-standup/id6761130346?l=en-GB&mt=12)
+
 ## Features
 
 - Lives in your menu bar, stays out of your way
